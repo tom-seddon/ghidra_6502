@@ -14,9 +14,13 @@
   </default_symbols>
   
   <default_memory_blocks>
-    <memory_block name="RAM"
+    <memory_block name="ZPG"
 		  start_address="0"
-		  length="65536"
+		  length="256"
+		  initialized="false" />
+    <memory_block name="STACK"
+		  start_address="0x100"
+		  length="256"
 		  initialized="false" />
   </default_memory_blocks>
 </processor_spec>

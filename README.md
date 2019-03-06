@@ -21,6 +21,12 @@ make Ghidra use it in situ, but I couldn't find one.)
 The CPUs come up as `6502`/`CMOS` and `6502`/`NMOS` in the languages
 list. (`6502`/`default` is the spec that comes with Ghidra.)
 
+The default memory map has two regions corresponding to zero page and
+stack. Use `Window` > `Memory Map` to add additional regions
+corresponding to whatever other areas don't overlap your binary. This
+isn't very slick but I haven't figured out how to make it usefully
+nicer.
+
 # Building it yourself
 
 Prerequisites:
