@@ -17,10 +17,12 @@
     <memory_block name="ZPG"
 		  start_address="0"
 		  length="256"
-		  initialized="false" />
+		  initialized="false"
+		  mode="rwx"/>
     <memory_block name="STACK"
 		  start_address="0x100"
 		  length="256"
-		  initialized="false" />
+		  initialized="false"
+		  mode="rwx"/>
   </default_memory_blocks>
 </processor_spec>

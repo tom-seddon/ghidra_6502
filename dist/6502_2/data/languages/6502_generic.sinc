@@ -204,13 +204,13 @@ REL: reloc		is rel	[ reloc = inst_next + rel; ] { export *:2 reloc; }
 
 ACC: A is A {export A;}
 IMM: "#"imm8 is imm8 {tmp:1=imm8; export tmp;}
-ZPG: $imm8 is imm8 {export *:1 imm8;}
-ZPX: $imm8,X is imm8 & X {tmp:2=imm8+zext(X); export *:1 tmp;}
-ZPY: $imm8,Y is imm8 & Y {tmp:2=imm8+zext(Y); export *:1 tmp;}
-ABS: $imm16 is imm16 {export *:1 imm16;}
-ABX: $imm16,X is imm16 & X {tmp:2=imm16+zext(X); export *:1 tmp;}
-ABY: $imm16,Y is imm16 & Y {tmp:2=imm16+zext(Y); export *:1 tmp;}
-ZIX: ($imm8,X) is imm8 & X {
+ZPG: imm8 is imm8 {export *:1 imm8;}
+ZPX: imm8,X is imm8 & X {tmp:2=imm8+zext(X); export *:1 tmp;}
+ZPY: imm8,Y is imm8 & Y {tmp:2=imm8+zext(Y); export *:1 tmp;}
+ABS: imm16 is imm16 {export *:1 imm16;}
+ABX: imm16,X is imm16 & X {tmp:2=imm16+zext(X); export *:1 tmp;}
+ABY: imm16,Y is imm16 & Y {tmp:2=imm16+zext(Y); export *:1 tmp;}
+ZIX: (imm8,X) is imm8 & X {
         zaddr:2=(imm8+zext(X))&0xff;
 	lsb:1=*:1 zaddr;
 	zaddr=(zaddr+1)&0xff;
@@ -218,7 +218,7 @@ ZIX: ($imm8,X) is imm8 & X {
 	addr:2=(zext(msb)<<8)|zext(lsb);
 	export *:1 addr;
 }
-ZIY: ($imm8),Y is imm8 & Y {
+ZIY: (imm8),Y is imm8 & Y {
         zaddr:2=imm8;
 	lsb:1=*:1 zaddr;
 	zaddr=(zaddr+1)&0xff;
@@ -228,7 +228,7 @@ ZIY: ($imm8),Y is imm8 & Y {
 }
 
 @ifdef CMOS
-ZIN: ($imm8) is imm8 {
+ZIN: (imm8) is imm8 {
         zaddr:2=imm8;
 	lsb:1=*:1 zaddr;
 	zaddr=(zaddr+1)&0xff;
@@ -238,7 +238,7 @@ ZIN: ($imm8) is imm8 {
 }
 @endif
 
-AIN: ($imm16) is imm16 {
+AIN: (imm16) is imm16 {
         iaddr:2=imm16;
      	lsb=*:1 iaddr;
 	iaddr=(iaddr&0xff00)|(((iaddr&0xff)+1)&0xff);
@@ -248,7 +248,7 @@ AIN: ($imm16) is imm16 {
 }
 
 @ifdef CMOS
-AIX: ($imm16,X) is imm16 & X {
+AIX: (imm16,X) is imm16 & X {
         iaddr:2=imm16+zext(X);
 	export *:2 iaddr;
 }

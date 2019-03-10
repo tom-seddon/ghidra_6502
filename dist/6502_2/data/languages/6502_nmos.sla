@@ -6314,9 +6314,8 @@
 <tokenfield bigendian="false" signbit="false" bitstart="0" bitend="7" bytestart="0" byteend="0" shift="0"/>
 </operand_sym>
 <subtable_sym name="ZPG" id="0x23" scope="0x0" numct="1">
-<constructor parent="0x23" first="2" length="1" line="207">
+<constructor parent="0x23" first="1" length="1" line="207">
 <oper id="0x24"/>
-<print piece="$"/>
 <opprint id="0"/>
 <construct_tpl>
 <handle_tpl><const_tpl type="spaceid" name="RAM"/><const_tpl type="real" val="0x1"/><const_tpl type="handle" val="0" s="space"/><const_tpl type="handle" val="0" s="offset"/><const_tpl type="real" val="0x0"/><const_tpl type="spaceid" name="unique"/><const_tpl type="real" val="0x610"/></handle_tpl>
@@ -6336,10 +6335,9 @@
 <tokenfield bigendian="false" signbit="false" bitstart="0" bitend="7" bytestart="0" byteend="0" shift="0"/>
 </operand_sym>
 <subtable_sym name="ZPX" id="0x25" scope="0x0" numct="1">
-<constructor parent="0x25" first="4" length="1" line="208">
+<constructor parent="0x25" first="3" length="1" line="208">
 <oper id="0x26"/>
 <oper id="0x27"/>
-<print piece="$"/>
 <opprint id="0"/>
 <print piece=","/>
 <opprint id="1"/>
@@ -6371,10 +6369,9 @@
 <operand_exp index="1" table="0x25" ct="0x0"/>
 </operand_sym>
 <subtable_sym name="ZPY" id="0x28" scope="0x0" numct="1">
-<constructor parent="0x28" first="4" length="1" line="209">
+<constructor parent="0x28" first="3" length="1" line="209">
 <oper id="0x29"/>
 <oper id="0x2a"/>
-<print piece="$"/>
 <opprint id="0"/>
 <print piece=","/>
 <opprint id="1"/>
@@ -6406,9 +6403,8 @@
 <operand_exp index="1" table="0x28" ct="0x0"/>
 </operand_sym>
 <subtable_sym name="ABS" id="0x2b" scope="0x0" numct="1">
-<constructor parent="0x2b" first="2" length="2" line="210">
+<constructor parent="0x2b" first="1" length="2" line="210">
 <oper id="0x2c"/>
-<print piece="$"/>
 <opprint id="0"/>
 <construct_tpl>
 <handle_tpl><const_tpl type="spaceid" name="RAM"/><const_tpl type="real" val="0x1"/><const_tpl type="handle" val="0" s="space"/><const_tpl type="handle" val="0" s="offset"/><const_tpl type="real" val="0x0"/><const_tpl type="spaceid" name="unique"/><const_tpl type="real" val="0x6a0"/></handle_tpl>
@@ -6428,10 +6424,9 @@
 <tokenfield bigendian="false" signbit="false" bitstart="0" bitend="15" bytestart="0" byteend="1" shift="0"/>
 </operand_sym>
 <subtable_sym name="ABX" id="0x2d" scope="0x0" numct="1">
-<constructor parent="0x2d" first="4" length="2" line="211">
+<constructor parent="0x2d" first="3" length="2" line="211">
 <oper id="0x2e"/>
 <oper id="0x2f"/>
-<print piece="$"/>
 <opprint id="0"/>
 <print piece=","/>
 <opprint id="1"/>
@@ -6463,10 +6458,9 @@
 <operand_exp index="1" table="0x2d" ct="0x0"/>
 </operand_sym>
 <subtable_sym name="ABY" id="0x30" scope="0x0" numct="1">
-<constructor parent="0x30" first="4" length="2" line="212">
+<constructor parent="0x30" first="3" length="2" line="212">
 <oper id="0x31"/>
 <oper id="0x32"/>
-<print piece="$"/>
 <opprint id="0"/>
 <print piece=","/>
 <opprint id="1"/>
@@ -6501,7 +6495,7 @@
 <constructor parent="0x33" first="5" length="1" line="213">
 <oper id="0x34"/>
 <oper id="0x35"/>
-<print piece="($"/>
+<print piece="("/>
 <opprint id="0"/>
 <print piece=","/>
 <opprint id="1"/>
@@ -6571,7 +6565,7 @@
 <constructor parent="0x36" first="4" length="1" line="221">
 <oper id="0x37"/>
 <oper id="0x38"/>
-<print piece="($"/>
+<print piece="("/>
 <opprint id="0"/>
 <print piece="),"/>
 <opprint id="1"/>
@@ -6638,7 +6632,7 @@
 <subtable_sym name="AIN" id="0x39" scope="0x0" numct="1">
 <constructor parent="0x39" first="3" length="2" line="241">
 <oper id="0x3a"/>
-<print piece="($"/>
+<print piece="("/>
 <opprint id="0"/>
 <print piece=")"/>
 <construct_tpl>
