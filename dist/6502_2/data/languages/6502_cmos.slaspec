@@ -1,2 +1,0 @@
-@define CMOS ""
-@include "6502_generic.sinc"
